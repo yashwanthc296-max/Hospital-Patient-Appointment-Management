@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fc;
+            color: #24344d;
+        }
+
+        header {
+            background-color: #073b74;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #0d65b5, #5bb8e8);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+        }
+
+        .container {
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .events {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        article {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 220px;
+            box-shadow: 0 2px 8px #d0d9e5;
+        }
+
+        article h3 {
+            color: #07549b;
+        }
+
+        .form-box {
+            background-color: white;
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #d0d9e5;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            background-color: #07549b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #043765;
+        }
+
+        aside {
+            background-color: #dceeff;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #073b74;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        a:focus, input:focus, select:focus,
+        textarea:focus, button:focus {
+            outline: 3px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>KL University</h1>
+    <p>Student Activity Management Portal</p>
+
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#register">Registration</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <h2>Welcome Students!</h2>
+        <p>Discover exciting events and activities at our university.</p>
+        <a href="#events" style="color:white;">Explore Events</a>
+    </section>
+
+    <section class="container" id="events">
+        <h2>Upcoming Events</h2>
+
+        <div class="events">
+
+            <article>
+                <h3>Technical Fest</h3>
+                <p>Date: 25 November 2026</p>
+                <p>Show your technical skills and creativity.</p>
+            </article>
+
+            <article>
+                <h3>Hackathon</h3>
+                <p>Date: 27 November 2026</p>
+                <p>Participate in coding and problem-solving challenges.</p>
+            </article>
+
+            <article>
+                <h3>Sports Meet</h3>
+                <p>Date: 30 November 2026</p>
+                <p>Join exciting sports competitions.</p>
+            </article>
+
+        </div>
+
+        <aside>
+            <h3>Announcements</h3>
+            <p>Registration is open for upcoming university events.</p>
+        </aside>
+    </section>
+
+    <section class="container" id="register">
+        <div class="form-box">
+            <h2>Student Activity Registration</h2>
+
+            <form action="#" method="post">
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="studentid">Student ID:</label>
+                <input type="text" id="studentid" name="studentid" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="year">Year of Study:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    <option>First Year</option>
+                    <option>Second Year</option>
+                    <option>Third Year</option>
+                    <option>Fourth Year</option>
+                </select>
+
+                <label for="branch">Department:</label>
+                <select id="branch" name="branch" required>
+                    <option value="">Select Department</option>
+                    <option>CSE</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+
+                <p>Gender:</p>
+
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male" style="display:inline;">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female" style="display:inline;">Female</label>
+
+                <p>Select Events:</p>
+
+                <input type="checkbox" id="fest" name="events" value="Technical Fest">
+                <label for="fest" style="display:inline;">Technical Fest</label><br>
+
+                <input type="checkbox" id="hack" name="events" value="Hackathon">
+                <label for="hack" style="display:inline;">Hackathon</label><br>
+
+                <input type="checkbox" id="sports" name="events" value="Sports Meet">
+                <label for="sports" style="display:inline;">Sports Meet</label>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Register Now</button>
+                <button type="reset">Reset</button>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="container" id="about">
+        <h2>About Us</h2>
+        <p>This portal helps students explore university activities,
+           register for events and develop their skills.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>KL University | Student Activity Portal</p>
+    <p>&copy; 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</head>
